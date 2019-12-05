@@ -1,13 +1,71 @@
 body {
     background-color: black;
     width: 95%;
+    height: 1500px;
     margin: auto;
 }
-
+/*Header*/
 .header {
-    background: url('素材/starfield-banner.jpg ');
+    background: url('./images/starfield-banner.jpg ');
     position: fixed;
+    height: 200px;
     width: 95%;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.navigation {
+    width: 100%;
+    height: 200px;
+}
+
+.header_ul {
+    list-style: none;
+    font-size: 25px;
+    margin: 43px 0 0 10%;
+}
+
+.header_ul li {
+	margin-top: 26px;
+    margin-left: 15px;
+    float: left;
+}
+
+.header_ul_ul {
+	width: auto;
+	text-align: left;
+	position: absolute;
+	list-style: none;
+	background: rgb(21,65,140);
+    color: black;
+    font-size: 20px;
+}
+
+.header_ul_home:not(:last-child)::after{
+    position: relative;
+    content: "";
+    width: 2px;
+    border-left: 2px solid gray;
+    right: -8px;
+}
+
+.header_ul_ul li {
+	margin: 10px 15px 0 -40px;
+	float: none;
+}
+
+.header_ul_home .header_ul_ul {
+	display: none;
+}
+
+.header_ul_home:hover .header_ul_ul {
+	display: block;
+}
+
+.header_ul_home:hover {
+    background-color: rgb(21,65,140);
 }
 
 .header .logo-link {
@@ -17,4 +75,277 @@ body {
 .header .logo {
     width:110px;
     margin:11px;
+}
+.logoset {
+    width: 100px;
+}
+
+.search {
+
+}
+
+.header-icon {
+    width: 40px;
+    margin: -10px 5px;
+}
+
+.search-input {
+    border-width: 0;
+    background-color: rgba(85, 85, 85, 0.44);
+    font-size: 25px;
+}
+
+.search-icon {
+    display: inline;
+    position: relative;
+    right: -250px;
+    top: -25px;
+}
+/*Header end*/
+
+/*Stories*/
+.container {
+    position:absolute;
+    top: 220px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5,300px);
+    grid-template-rows: repeat(5,300px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.item1 {
+    background-color: violet;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item2 {
+    background-color: saddlebrown;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item3 {
+    background-color: rgb(69, 112, 154);
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item4 {
+    background-color: gray;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.item5 {
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.item6 {
+    background-color: lawngreen;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.item7 {
+    background-color: magenta;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.item7-video{
+    width: 300px;
+    height: 100%;
+    object-fit: fill;
+}
+.item8 {
+    background-color: rgb(34, 34, 34);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.item9 {
+    background-color: brown;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.item10 {
+    background-color: brown;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.item11 {
+    background-color: brown;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.story-img {
+    width: 100%;
+    height: 100%;
+}
+.story-blue-bar {
+    position: relative;
+    text-align: center;
+    top: -70px;
+    margin-bottom: 0;
+    font-size: 15px;
+    height: 25px;
+    color: white;
+    width: 60px;
+    background: rgba(63, 40, 196, 0.6);
+}
+.story-white-bar {
+    position: relative;
+    top: -85px;
+    margin-top: 0;
+    font-size: 15px;
+    width: 100%;
+    height: 25px;
+    background: rgba(223, 218, 218, 0.6);
+}
+.item2 .story-blue-bar {
+    top: -90px;
+}
+.item2 .story-white-bar {
+    top: -105px;
+    height: 40px;
+}
+.item3 {
+    font-size: 12px;
+    color: white;
+}
+.item3 .item3-p1, .item3-p4 {
+    margin: 0 15px;
+}
+.item3 .item3-p2, .item3-p3 {
+    margin: 0 10px;
+}
+.item3 .item3-p4 {
+    position: relative;
+    bottom: -115px;
+    width: 100%;
+}
+.item3-p2::before{
+    content: "";
+    width: 280px;
+    display: block;
+    border-top: 1px solid white;
+    margin: -5px auto;
+    margin-top: 5px;
+}
+.item3-p4::before{
+    content: "";
+    width: 280px;
+    display: block;
+    border-top: 1px solid white;
+    margin: 0 auto;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+}
+.item4 .story-white-bar {
+    top: -45px;
+}
+.item5 .story-blue-bar {
+    width: 130px;
+}
+.item6 .story-blue-bar {
+    width: 80px;
+}
+.item8 .story-blue-bar {
+    width: 100px;
+    top: -90px;
+}
+.item8 .story-white-bar {
+    height: 45px;
+    top: -105px;
+}
+.item9 .story-blue-bar {
+    top: -90px;
+}
+.item9 .story-white-bar{
+    height: 45px;
+    top: -105px;
+}
+.item10 .story-blue-bar {
+    top: -90px;
+}
+.item10 .story-white-bar{
+    height: 45px;
+    top: -105px;
+}
+.item11 .story-blue-bar {
+    width: 180px;
+    top: -90px;
+}
+.item11 .story-white-bar{
+    height: 45px;
+    top: -105px;
+}
+/*Stories end*/
+
+/*More stories*/
+.more-stories {
+    position: relative;
+    top: 1450px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    background: rgb(29, 66, 136);
+}
+/*More stories end*/
+
+/*Bottom*/
+.bottom {
+    position: relative;
+    bottom: -100%;
+}
+.bottom-icon {
+    width: 80px;
+    float: left;
+}
+.bottom-text {
+    position: relative;
+    font-size: 15px;
+    color: white;
+    bottom: -20px;
+    right: -10px;
+}
+
+.bottom .bottom-info {
+    color: rgb(99,125,184);
+    float: right;
+    width: 80%;
+}
+.bottom_ul {
+    list-style: none;
+    font-size: 15px;
+    margin: 40px 0 0 0;
+    float: right;
+}
+.bottom_ul li {
+    margin: 0 15px;
+    float: left;
 }
